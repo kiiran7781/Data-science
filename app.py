@@ -1,6 +1,6 @@
 import streamlit as st
 import joblib
-
+import numpy as np
 saved_model = joblib.load('xgboost_model.joblib')
 
 st.title("Iris Flower Classification")
@@ -10,7 +10,7 @@ PetalLength = st.number_input("Petal Length")
 PetalWidth = st.number_input("Petal Width")
 
 if st.button("Predict"):
-    features = [[SepalLength, SepalWidth, PetalLength, PetalWidth]]
+    features = np.array([[SepalLength, SepalWidth, PetalLength, PetalWidth]])
     prediction = saved_model.predict(features)
     
     if prediction==0:
