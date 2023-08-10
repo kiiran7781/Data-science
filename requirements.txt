@@ -1,4 +1,6 @@
 sckit-learn
+numpy
+matplotlib
 pandas
 joblib
 streamlit==1.12.0
