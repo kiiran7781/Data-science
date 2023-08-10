@@ -1,2 +1,4 @@
 sckit-learn
+pandas
 joblib
+streamlit==1.12.0
